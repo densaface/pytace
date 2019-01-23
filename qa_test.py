@@ -28,7 +28,7 @@ if test_load:
 test_replay_only = False # test only start replay current aip script (without loading and
 if test_replay_only:
     res_play = ace.Replay()
-    if not res_load:
+    if not res_play[0]:
         raise Exception("Error start Replay aip file.")
     print ("Success test start Replay!")
     exit(0)
@@ -36,7 +36,7 @@ if test_replay_only:
 test_play = False # test full aip replay with waiting end of Replaying
 if test_play:
     res_play = ace.Replay(r'c:\AutoClickExtreme\aips\demo_notepad.aip')
-    if not res_load:
+    if not res_play[0]:
         raise Exception("Error playing aip file. Check if it exists")
     print ("Success test playing aip file!")
     exit(0)
